@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Ain Shasha Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Panggil fail CSS di sini -->
+    <script type="module" crossorigin src="/myport/assets/index-D8N8MkO7.js"></script>
+    <link rel="stylesheet" crossorigin href="/myport/assets/index-XpbwsO7N.css">
+  </head>
+
+<body>
+      <header class="main-header">
+    <nav class="navbar">
+        <div class="logo">AIN SHASHA</div>
+        <div class="nav-links">
+        <ul>
+            <li><a href="#homie"><i class="fa-solid fa-house"></i></a></li>  
+            <li><a href="#about"><i class="fa-solid fa-user"></i></a></li>   
+            <li><a href="#work"><i class="fa-solid fa-briefcase"></i></a></li>   
+            <li><a href="#"><i class="fa-solid fa-phone"></i></a></li>
+        </ul>
+        <a href="Resume_AinShasha.pdf" target="_blank" class="resume-btn">
+            <i class="fa-solid fa-file-pdf"></i> Resume</a>
+        </div>
+    </nav>
+</header>
+
+<!--BODY ATAU TENGAH TENGAH TU -->
+<main>
+    <div id="loading-screen">
+        <div class="loader"></div>
+        <p>Memuatkan Portfolio...</p>
+
+        <script>
+        // window.addEventListener('load') bermaksud tunggu SEMUA benda termasuk gambar & 3D siap
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            
+            // Tambah sedikit delay (contoh: 500ms atau 0.5 saat) 
+            // supaya efek loading tu nampak lebih natural sebelum hilang
+            setTimeout(() => {
+                loadingScreen.classList.add('hilang');
+            }, 500); 
+        });
+    </script>
+    </div>
+
+<section id='homie' class="game-section">
+    <div class="animated-text-container">
+        <h1 class="slide-left anim-elemen dari-kanan">Ain Shasha</h1>
+        <h1 class="slide-right anim-elemen dari-kiri">Portfolio</h1>
+    </div> 
+   <div id="ui-container">
+    <div class="kotak-hitam"></div>
+        <div class="status-bar">
+            <span id="info">Giliran: Pemain X</span>
+            <div id="controls">
+                <button id="btnX" class="active">X</button>
+                <button id="btnO">O</button>
+            </div>
+        </div>
+    </div>
+     <div id="bottom-container">
+        <button id="btnReset">Reset Game</button>
+    </div>
+</section>
+
+<section id='about'>
+<div class="gambar formal anim-elemen dari-kanan">
+    <div class="mygams">    
+        <img src="/myport/assets/mygambar-DeaOMJQj.png" alt="">
+    </div>
+    <div class="linked">
+    <a href="https://linkedin.com/in/ain-shasha" class="social-icon" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            
+            <!-- Ikon GitHub -->
+            <a href="https://github.com/ashashshn" class="social-icon" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            
+            <!-- Ikon Instagram -->
+            <a href="https://instagram.com/asha_.ain" class="social-icon" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <!-- Ikon whatapps -->
+             <a href="https://wa.me/60134830266" class="social-icon" target="_blank">
+              <i class="fa-brands fa-whatsapp"></i>
+             </a>
+            
+            <!-- Ikon Email -->
+            <a href="mailto:ainshashaazhar@email.com" class="social-icon">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+    </div> 
+</div>
+<div class="glassbox anim-elemen dari-bawah ">
+ <div class="myself anim-elemen dari-bawah">
+        <h2>
+           My name is Ain Shasha, and I am a prospective UTeM graduate with a strong passion for web interface development and visual design. Adept at combining coding logic with graphic aesthetics to produce high-quality digital assets. Seeking career opportunities or open positions as a Web Developer or Graphic Designer starting late this year."
+
+        </h2>
+    </div>
+</div> 
+</section>
+
+<section id="work">
+    <div class="kerja">
+        
+        <div class="galeri-wrapper">
+            
+            <div class="myw">My Work</div>
+            
+            <div class="bulat">
+                <div class="works" onclick="bukaProjek('kiri', 270, 1)">
+                    <img src="/myport/assets/1-Bw9C5JdX.png" alt="">
+                </div>
+
+                <div class="works" onclick="bukaProjek('kiri', 90, 2)">
+                    <img src="/myport/assets/2-B6Oi5SiD.png" alt="">
+                </div>
+
+                <div class="works" onclick="bukaProjek('kiri', 0, 3)">
+                    <img src="/myport/assets/3-DFelSRZB.png" alt="">
+                </div>
+
+                <div class="works" onclick="bukaProjek('kiri', 180, 4)">
+                    <img src="/myport/assets/4-CQ38Js7K.png" alt="">
+                </div>
+            </div>
+            
+        </div> 
+
+        <div id="modal-projek" class="modal-container">
+            <div class="modal-content">
+                
+                <div id="view-galeri">
+                    <h2 id="tajuk-kategori" class="modal-tajuk">Choose Project</h2>
+                    <p style="color: #ccc; margin-bottom: 15px; font-size: 0.9rem;">Click on the image for more details.</p>
+                    <div id="grid-gambar" class="grid-projek">
+                        </div>
+                </div>
+                
+                <div id="view-detail" class="sembunyi">
+                    <button class="btn-kembali" onclick="kembaliKeGaleri()">
+                        <i class="fa-solid fa-arrow-left"></i> Back to Gallery
+                    </button>
+                    
+                    <div class="kandungan-detail">
+                        <div class="bahagian-gambar">
+                            <img id="gambar-utama" src="" alt="Gambar Projek">
+                        </div>
+                        
+                        <div class="bahagian-teks">
+                            <h3 id="tajuk-detail"></h3>
+                            <p id="deskripsi-detail"></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn-tutup" onclick="tutupProjek()">Close</button>
+            </div>
+        </div>
+    </div> 
+</section>
+
+</main>
+
+<!--FOOTER BAHAGIAN BAWAH-->
+    <footer class="main-footer">
+    <div class="footer-container">
+        <!-- Sebelah Kiri -->
+        <div class="footer-left">
+            <p>&copy; 2026 Ain Shasha - Crafted with passion.</p>
+        </div>
+
+        <!-- Sebelah Kanan (Socials) -->
+        <div class="footer-right">
+            <!-- Ikon LinkedIn -->
+            <a href="https://linkedin.com/in/ain-shasha" class="social-icon" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            
+            <!-- Ikon GitHub -->
+            <a href="https://github.com/ashashshn" class="social-icon" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            
+            <!-- Ikon Instagram -->
+            <a href="https://instagram.com/asha_.ain" class="social-icon" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <!-- Ikon whatapps -->
+             <a href="https://wa.me/60134830266" class="social-icon" target="_blank">
+              <i class="fa-brands fa-whatsapp"></i>
+             </a>
+            
+            <!-- Ikon Email -->
+            <a href="mailto:ainshashaazhar@email.com" class="social-icon">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+
+</html>
